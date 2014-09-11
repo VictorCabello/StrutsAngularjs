@@ -12,6 +12,7 @@
   </properties>
   <modules>
       <module>webapp</module>
+      <module>persistence</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -84,6 +85,13 @@
           </exclusion>
         </exclusions>
       </dependency>
+    
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-core</artifactId>
+          <version>3.6.3.Final</version>
+      </dependency>
     </dependencies>
+
   </dependencyManagement>
 </project>
