@@ -5,6 +5,6 @@
 <hibernate-configuration>
 <session-factory>
  <property name="connection.datasource">DataSourceConnection</property>
- <mapping class="com.victor.persistence.DBUser"></mapping>
+ <mapping class="com.bluecross.persistence.DBUser"></mapping>
 </session-factory>
-</hibernate-configuration>s
+</hibernate-configuration>

@@ -1,4 +1,4 @@
-package com.victor.persistence;
+package com.bluecross.persistence;
 
 import java.io.Serializable;
 import java.util.Date;
