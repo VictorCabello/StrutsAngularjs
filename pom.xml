@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bluecross</groupId>
+  <groupId>com.victor</groupId>
   <artifactId>deploy_test</artifactId>
   <version>2.0.0</version>
   <packaging>pom</packaging>
@@ -9,6 +9,7 @@
   <properties>
     <struts2.version>2.3.16.3</struts2.version>
     <struts2-jquery.version>3.7.1</struts2-jquery.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <modules>
       <module>webapp</module>
@@ -70,20 +71,6 @@
         <groupId>org.apache.velocity</groupId>
         <artifactId>velocity-tools</artifactId>
         <version>2.0</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>struts-tiles</artifactId>
-            <groupId>org.apache.struts</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>struts-core</artifactId>
-            <groupId>org.apache.struts</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>struts-taglib</artifactId>
-            <groupId>org.apache.struts</groupId>
-          </exclusion>
-        </exclusions>
       </dependency>
       
       
@@ -94,4 +81,17 @@
     </dependency>
     </dependencies>
   </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
