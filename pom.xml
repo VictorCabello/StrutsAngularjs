@@ -79,6 +79,12 @@
       <artifactId>hibernate-core</artifactId>
       <version>3.6.3.Final</version>
     </dependency>
+      
+    <dependency>
+        <groupId>com.victor</groupId>
+        <artifactId>deploy_test_persistence</artifactId>
+        <version>${project.version}</version>
+    </dependency>
     </dependencies>
   </dependencyManagement>
   <build>

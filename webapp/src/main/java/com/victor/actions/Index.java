@@ -13,7 +13,7 @@ public class Index extends ActionSupport {
     private String redirectName;
 
     public String execute() {
-        redirectName = "hello";
+        redirectName = "list-user";
         return Action.SUCCESS;
     }
 
