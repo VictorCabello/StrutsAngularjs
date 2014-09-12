@@ -6,14 +6,15 @@ import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 
 @Results({
-        @Result(name = Action.SUCCESS, location = "${redirectName}", type = "redirectAction")
+        @Result(name = Action.SUCCESS, location = "${redirectName}", type = "redirect")
 })
 public class Index extends ActionSupport {
 
     private String redirectName;
 
+    @Override
     public String execute() {
-        redirectName = "list-user";
+        redirectName = "/index.html";
         return Action.SUCCESS;
     }
 

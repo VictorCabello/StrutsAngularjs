@@ -8,11 +8,15 @@ import com.opensymphony.xwork2.ModelDriven;
 import com.victor.actions.model.UserModel;
 import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.ParentPackage;
+import org.apache.struts2.convention.annotation.Result;
 
 /**
  *
  * @author intvmca
  */
+@ParentPackage("json-default")
+@Result(type = "json")
 public class UserAction extends ActionSupport implements ModelDriven<UserModel>{
  
     private final UserModel itsModel;

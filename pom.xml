@@ -43,6 +43,12 @@
         <artifactId>struts2-jquery-plugin</artifactId>
         <version>${struts2-jquery.version}</version>
       </dependency>
+          <!-- Struts 2 JSON Plugins -->
+    <dependency>
+          <groupId>org.apache.struts</groupId>
+	  <artifactId>struts2-json-plugin</artifactId>
+	  <version>${struts2.version}</version>
+    </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
