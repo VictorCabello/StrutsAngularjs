@@ -2,14 +2,17 @@
 
 package com.victor.actions;
 
-import com.bluecross.persistence.DBUser;
+import com.victor.persistence.HibernateUtil;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.victor.actions.model.UserModel;
+import com.victor.persistence.DBUser;
 import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
 
 /**
  *
@@ -20,6 +23,7 @@ import org.apache.struts2.convention.annotation.Result;
 public class UserAction extends ActionSupport implements ModelDriven<UserModel>{
  
     private final UserModel itsModel;
+    private final SessionFactory databaseAccess = HibernateUtil.getSessionFactory();
     
     public UserAction(){
         itsModel = new UserModel();
@@ -27,11 +31,10 @@ public class UserAction extends ActionSupport implements ModelDriven<UserModel>{
     
     @Action(value = "/list-user")
     public String list(){
-        final List<DBUser> myList = itsModel.getList();
-
-        DBUser myUser = new DBUser();
-        myUser.setUsername("Victor");
-        myList.add(myUser);
+        Session mySession = databaseAccess.openSession();
+        List myResult = mySession.createQuery("select u from " + DBUser.class.getName() + " u").list();
+        itsModel.setList(myResult);
+        
         return SUCCESS;
     }
 

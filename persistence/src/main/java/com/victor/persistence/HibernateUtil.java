@@ -1,4 +1,4 @@
-package com.bluecross.persistence;
+package com.victor.persistence;
 
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;

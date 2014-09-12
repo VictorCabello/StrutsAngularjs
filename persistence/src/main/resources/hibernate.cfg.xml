@@ -7,4 +7,4 @@
  <property name="connection.datasource">DataSourceConnection</property>
  <mapping class="com.victor.persistence.DBUser"></mapping>
 </session-factory>
-</hibernate-configuration>s
+</hibernate-configuration>

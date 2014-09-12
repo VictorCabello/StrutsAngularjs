@@ -1,7 +1,7 @@
 
 package com.victor.actions.model;
 
-import com.bluecross.persistence.DBUser;
+import com.victor.persistence.DBUser;
 import java.util.ArrayList;
 import java.util.List;
 
